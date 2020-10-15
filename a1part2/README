@@ -1,0 +1,61 @@
+Name: Usama Ali (1582217) and Raamish Naveed (1582029)
+CMPUT 275, Winter 2020
+Assignment 1: Restaurant Finder (Part 2)
+
+Description: 
+	This program improves the restaurant finder program developed in part 1:
+	-The quickSort algorithm is implemented to make the program run faster.
+	-We can now scroll through more than 21 restaurants in the list view.
+	-We can now choose a rating and display restaurants that are above it.
+	-We can now choose the  sorting algotithm (ISORT, QSORT, or both) and  display the run time.
+	-We can now view restaurants that are above a certain rating on the map.
+
+
+Included Files:
+	*a1part2.cpp
+	*lcd_image.cpp (contains implementation of header file)
+	*lcd_image.h (header file for drawing section of map on screen)
+	*restaurant.cpp
+	*restaurant.h
+	*yegmap.cpp
+	*yegmap.h
+	*Makefile
+	*README
+
+Accessories:
+	5x Wires
+	1x JoyStick
+	1x USB cable
+	1x Arduino MEGA board
+	1x LCD Display for Arduino
+	1x SD card containing the map of Edmonton
+
+Wiring Instructions:
+	Arduino pin GND           <-->    Joystick pin GND
+	Arduino pin 5V            <-->    Joystick pin +5V
+	Arduino digital pin 53    <-->    Joystick pin  SW
+	Arduino analogue pin A8   <-->    Joystick pin VRy
+	Arduino analogue pin A9   <-->    Joystick pin VRx
+
+
+Running Instructions:
+	1) Make sure your Arduino is wired up correctly and connected to your laptop.
+	2) Open the terminal and navigate to the correct program directory.
+	3) Type in "make upload" to compile the program and upload it to the Arduino.
+	4) Move the joystick to move the cursor around the map of Edmonton.
+	5) Press the joystick button to display a list of nearest 21 restaurants with at least the curret rating near the cursor’s current position.
+	6) Select a restaurant from the list using the joystick.
+	7) This will redisplay the map, with the selected restaurant at the centre of the screen.
+	8) Touch the map on the screen to show all the restaurants with at least the current rating in the current section of the map.
+
+
+Notes and Assumptions:
+	* A special image of the map of Edmonton 2048x2048 named "yeg-big.lcd" is loaded onto a specially formatted microSD card which is inserted into the display.
+	* Moving cursor over blue dots representing restaurants, erase them. Intended.
+	* Touching map after changing rating does not remove previous blue dots. Intended.
+
+Acknowledgements:
+	The assignment 1 part 1 solution zip file was downloaded from eClass and part 2 was built on it. 
+
+
+
